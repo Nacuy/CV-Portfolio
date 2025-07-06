@@ -1,64 +1,51 @@
 {
   "basics": {
-    "name": "John Doe",
-    "label": "Junior Full Stack Developer",
+    "name": "Yucan Ye",
+    "label": "Full Stack Developer",
     "image": "/me_avatar.jpg",
-    "email": "john.doe@example.com",
-    "phone": "+1 555-555-5555",
-    "url": "https://johndoe.dev",
-    "summary": "Junior Full Stack Developer with a passion for building web applications. Currently seeking opportunities to further develop my skills in a professional setting.",
-    "theme": "default",
+    "email": "yucanye05@gmail.com",
+    "phone": "+31 6 82933739",
+    "url": "https://www.linkedin.com/in/yucan-ye/",
+    "summary": "Enthusiastic Junior Full Stack Developer with hands-on experience in React, TypeScript, C#, Kotlin, and Flutter. Passionate about crafting clean, scalable web applications and continuously learning new technologies. Currently studying Software Development at Technova College and seeking opportunities to grow in a professional development environment.",
+    "theme": "orange",
     "location": {
-      "address": "",
-      "postalCode": "10001",
-      "city": "Auckland",
-      "countryCode": "NZ",
-      "region": "New Zealand"
+      "postalCode": "6714 DZ",
+      "city": "Ede",
+      "countryCode": "NL",
+      "region": "Gelderland"
     },
     "profiles": [
       {
         "network": "LinkedIn",
-        "username": "john-doe",
-        "url": "https://linkedin.com/in/john-doe"
-      },
-      {
-        "network": "X",
-        "username": "john-doe",
-        "url": "https://x.com/john-doe"
+        "username": "yucan-ye",
+        "url": "https://www.linkedin.com/in/yucan-ye/"
       },
       {
         "network": "GitHub",
-        "username": "johndoe",
-        "url": "https://github.com/johndoe"
+        "username": "nacuy",
+        "url": "https://github.com/Nacuy"
       }
     ]
   },
   "work": [
     {
-      "name": "Tech Startup",
+      "name": "Appec",
       "position": "Junior Web Developer",
       "location_type": "On site",
-      "location": "Auckland, New Zealand",
-      "url": "https://techstartup.com",
+      "location": "Ede, Netherlands",
+      "url": "https://appec.nl",
       "startDate": "2024-01-01",
       "endDate": null,
-      "summary": "Developing and maintaining web applications using JavaScript, HTML, and CSS. Collaborating with the team to implement new features and fix bugs.",
+      "summary": "Working on web applications using modern front-end frameworks and collaborating with senior developers in a professional environment.",
       "highlights": [
-        "Improved website performance by optimizing code"
+        "Improved page load time by 40% by optimizing image assets and JavaScript bundles"
       ],
       "responsibilities": [
-        "Collaborated with senior developers to design and implement web applications using modern JavaScript frameworks.",
-        "Assisted in debugging and optimizing front-end code to ensure smooth user experiences.",
-        "Participated in code reviews and contributed to improving coding standards within the team."
+        "Designed and implemented user interfaces using React and Tailwind CSS.",
+        "Assisted in debugging and improving front-end performance.",
+        "Collaborated in code reviews and helped maintain clean and scalable codebase."
       ],
-      "achievements": [
-        "Developing and maintaining web applications using JavaScript, HTML, and CSS. Collaborating with the team to implement new features and fix bugs."
-      ],
-      "skills": [
-        "React",
-        "Tailwind",
-        "GitHub"
-      ]
+      "skills": ["React", "Tailwind CSS", "JavaScript", "Git", "GitHub"]
     },
     {
       "name": "Innovative Solutions",
@@ -68,40 +55,29 @@
       "url": "https://innovativesolutions.com",
       "startDate": "2022-06-01",
       "endDate": "2023-06-01",
-      "summary": "Assisting in the development and maintenance of software applications using Python and Django. Collaborating with cross-functional teams to ensure quality and timely delivery of software solutions.",
+      "summary": "Assisted in the development of backend systems and full-stack features using Python and Django in an agile team.",
       "highlights": [
-        "Contributed to a major project that streamlined internal workflows, improving efficiency by 30%"
+        "Contributed to automation of internal workflows, improving efficiency by 30%"
       ],
       "responsibilities": [
-        "Developed and maintained backend services using Python and Django.",
-        "Worked closely with front-end developers to integrate user-facing elements with server-side logic.",
-        "Participated in daily stand-ups and bi-weekly sprint planning meetings to ensure alignment with project goals."
+        "Developed backend services with Django and integrated with PostgreSQL.",
+        "Worked with front-end developers to integrate APIs and UI components.",
+        "Participated in sprint planning and daily stand-ups."
       ],
-      "achievements": [
-        "Successfully implemented a feature that enhanced user authentication, improving security measures."
-      ],
-      "skills": [
-        "Python",
-        "Django",
-        "SQL",
-        "Git"
-      ]
+      "skills": ["Python", "Django", "PostgreSQL", "Agile", "Git"]
     },
     {
       "name": "Web Agency",
       "position": "Intern Web Developer",
       "location_type": "Remote",
       "location": "Sydney, Australia",
-      "startDate": "2022-06-01",
-      "endDate": "2022-12-01",
-      "summary": "Assisted in developing client websites and applications. Gained hands-on experience with front-end and back-end technologies.",
+      "startDate": "2022-01-01",
+      "endDate": "2022-06-01",
+      "summary": "Gained hands-on experience in building websites for clients with HTML, CSS, and JavaScript.",
       "highlights": [
-        "Completed several client projects successfully"
+        "Completed 3+ client projects successfully under supervision"
       ],
-      "skills": [
-        "HTML",
-        "CSS"
-      ]
+      "skills": ["HTML", "CSS", "Basic JavaScript"]
     }
   ],
   "volunteer": [
@@ -111,13 +87,26 @@
       "url": "https://codingclub.com/",
       "startDate": "2021-01-01",
       "endDate": "2022-01-01",
-      "summary": "Helped organize coding workshops and mentored new members.",
+      "summary": "Helped organize coding workshops and mentored beginners in basic programming concepts.",
       "highlights": [
-        "Awarded 'Volunteer of the Month'"
+        "Awarded 'Volunteer of the Month' for dedication and mentorship"
       ]
     }
   ],
   "education": [
+    {
+      "institution": "Technova College",
+      "url": "https://technova.nl",
+      "area": "Software Development",
+      "studyType": "MBO - Application Developer",
+      "startDate": "2023-09-01",
+      "endDate": null,
+      "courses": [
+        "Application Design",
+        "Web Development with React",
+        "Internship at Appec"
+      ]
+    },
     {
       "institution": "State University",
       "url": "https://stateuniversity.edu",
@@ -129,32 +118,6 @@
       "courses": [
         "CS101 - Introduction to Computer Science",
         "CS102 - Data Structures"
-      ]
-    },
-    {
-      "institution": "Tech Institute",
-      "url": "https://techinstitute.edu",
-      "area": "Software Engineering",
-      "studyType": "Master",
-      "startDate": "2020-09-01",
-      "endDate": "2022-12-01",
-      "score": "3.9",
-      "courses": [
-        "SE201 - Advanced Software Development",
-        "SE202 - Software Architecture and Design"
-      ]
-    },
-    {
-      "institution": "City College",
-      "url": "https://citycollege.edu",
-      "area": "Information Technology",
-      "studyType": "Associate Degree",
-      "startDate": "2017-01-01",
-      "endDate": "2019-12-01",
-      "score": "3.7",
-      "courses": [
-        "IT101 - Networking Fundamentals",
-        "IT102 - Database Management Systems"
       ]
     }
   ],
@@ -168,195 +131,127 @@
   ],
   "skills": [
     {
-      "name": "Figma",
-      "level": "Expert",
-      "keywords": [
-        "Design",
-        "UI"
-      ]
-    },
-    {
-      "name": "Gitlab",
-      "level": "Intermediate",
-      "keywords": [
-        "Version Control",
-        "Collaboration",
-        "Source Code"
-      ]
-    },
-    {
-      "name": "HTML",
-      "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Frontend"
-      ]
-    },
-    {
-      "name": "CSS",
-      "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "Responsive Design"
-      ]
-    },
-    {
       "name": "JavaScript",
       "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "Backend",
-        "Fullstack"
-      ]
-    },
-    {
-      "name": "Tailwind",
-      "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "CSS Framework",
-        "Responsive Design"
-      ]
+      "keywords": ["ES6", "DOM", "Async"]
     },
     {
       "name": "TypeScript",
       "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "Backend",
-        "JavaScript Superset"
-      ]
-    },
-    {
-      "name": "Node",
-      "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Backend",
-        "JavaScript",
-        "Server"
-      ]
-    },
-    {
-      "name": "MySQL",
-      "level": "Intermediate",
-      "keywords": [
-        "Databases",
-        "SQL",
-        "Data Storage",
-        "Backend"
-      ]
-    },
-    {
-      "name": "Git",
-      "level": "Intermediate",
-      "keywords": [
-        "Version Control",
-        "Collaboration",
-        "Source Code"
-      ]
-    },
-    {
-      "name": "GitHub",
-      "level": "Intermediate",
-      "keywords": [
-        "Version Control",
-        "Collaboration",
-        "Source Code",
-        "Git"
-      ]
-    },
-    {
-      "name": "Next.js",
-      "level": "Beginner",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "React Framework",
-        "SSR",
-        "Static Generation"
-      ]
+      "keywords": ["Strict typing", "React integration"]
     },
     {
       "name": "React",
       "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "JavaScript Library",
-        "UI"
-      ]
+      "keywords": ["Hooks", "Components", "State Management"]
+    },
+    {
+      "name": "Next.js",
+      "level": "Beginner",
+      "keywords": ["SSR", "Static Generation"]
+    },
+    {
+      "name": "Node.js",
+      "level": "Intermediate",
+      "keywords": ["Express", "REST APIs"]
+    },
+    {
+      "name": "Tailwind CSS",
+      "level": "Intermediate",
+      "keywords": ["Utility-first CSS", "Responsive Design"]
+    },
+    {
+      "name": "HTML",
+      "level": "Intermediate",
+      "keywords": ["Semantic HTML", "Accessibility"]
+    },
+    {
+      "name": "CSS",
+      "level": "Intermediate",
+      "keywords": ["Flexbox", "Grid", "Media Queries"]
+    },
+    {
+      "name": "Git",
+      "level": "Intermediate",
+      "keywords": ["Branching", "Merging", "Pull Requests"]
+    },
+    {
+      "name": "GitHub",
+      "level": "Intermediate",
+      "keywords": ["Collaboration", "Open Source"]
+    },
+    {
+      "name": "Figma",
+      "level": "Expert",
+      "keywords": ["UI Design", "Prototyping"]
+    },
+    {
+      "name": "MySQL",
+      "level": "Intermediate",
+      "keywords": ["Queries", "Joins", "Indexes"]
+    },
+    {
+      "name": "Django",
+      "level": "Intermediate",
+      "keywords": ["Models", "Views", "Auth"]
+    },
+    {
+      "name": "SQL",
+      "level": "Intermediate",
+      "keywords": ["Schema Design", "Query Optimization"]
     }
   ],
   "languages": [
-    {
-      "language": "English",
-      "fluency": "Native speaker"
-    },
-    {
-      "language": "Spanish",
-      "fluency": "Intermediate"
-    }
+    { "language": "English", "fluency": "Professional Working Proficiency" },
+    { "language": "Spanish", "fluency": "Intermediate" },
+    { "language": "Chinese", "fluency": "Native Speaker" }
   ],
   "interests": [
     {
       "name": "Technology",
-      "keywords": [
-        "AI",
-        "Blockchain"
-      ]
-    }
-  ],
-  "references": [
-    {
-      "name": "Jane Smith",
-      "reference": "Reference…"
+      "keywords": ["AI", "Blockchain", "Web Development"]
     }
   ],
   "projects": [
     {
       "name": "Personal Portfolio",
-      "isActive": false,
-      "description": "A personal portfolio website to showcase my projects and skills.",
+      "isActive": true,
+      "description": "A developer portfolio to showcase projects, skills, and contact information.",
       "highlights": [
         "Built with React and Tailwind CSS",
-        "Includes a blog and contact form"
+        "Responsive design and dark mode support"
       ],
-      "url": "https://johndoe.dev",
-      "github": "https://github.com"
+      "url": "https://nacuy.dev",
+      "github": "https://github.com/Nacuy/personal-portfolio"
     },
     {
       "name": "Weather App",
       "isActive": true,
-      "description": "A web application that provides weather information for any location.",
+      "description": "A weather forecast app using OpenWeatherMap API and modern JavaScript.",
       "highlights": [
-        "Built with JavaScript and OpenWeatherMap API",
-        "Responsive design"
+        "Uses fetch API and geolocation",
+        "Mobile-friendly interface"
       ],
       "url": "https://weatherapp.com"
     },
     {
       "name": "Task Manager",
       "isActive": true,
-      "description": "A simple task management app to keep track of daily tasks.",
+      "description": "Task tracking app with login system and persistent data using MongoDB.",
       "highlights": [
-        "Built with Node.js and MongoDB",
-        "User authentication and CRUD operations"
+        "Built with Node.js, Express, MongoDB",
+        "Authentication with JWT"
       ],
       "url": "https://taskmanager.com",
-      "github": "https://github.com"
+      "github": "https://github.com/Nacuy/task-manager"
     },
     {
       "name": "E-commerce Site",
       "isActive": false,
-      "description": "An online store built with Next.js and Stripe for payment processing.",
+      "description": "A full-stack online store with product pages, cart, and Stripe checkout.",
       "highlights": [
-        "Product management and shopping cart functionality",
-        "Secure payment integration"
+        "Developed with Next.js and Tailwind",
+        "Secure Stripe integration"
       ],
       "url": "https://ecommerce.com"
     }

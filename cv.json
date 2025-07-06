@@ -30,28 +30,41 @@
   "work": [
     {
       "name": "Appec",
-      "position": "Junior Web Developer",
-      "location_type": "On site",
-      "location": "Ede, Netherlands",
+      "position": "App Developer & Projectmanager",
+      "location_type": "Hybrid",
+      "location": "Nijmegen, Netherland",
       "url": "https://appec.nl",
-      "startDate": "2024-01-01",
+      "startDate": "2025-04-11",
       "endDate": null,
-      "summary": "Working on web applications using modern front-end frameworks and collaborating with senior developers in a professional environment.",
-      "highlights": [
-        "Improved page load time by 40% by optimizing image assets and JavaScript bundles"
-      ],
+      "summary": "Taken vedelen en applicatie;s testen.",
       "responsibilities": [
-        "Designed and implemented user interfaces using React and Tailwind CSS.",
-        "Assisted in debugging and improving front-end performance.",
-        "Collaborated in code reviews and helped maintain clean and scalable codebase."
+        "Mobie applicaties tesen van iOS tot ANdoird apparaten in verschillen de versies",
+        "Duidelijke feedback geven, niet allemaal screen shot met een response, maar ook onder zoek hoe en waar het bug is veroorzaakt",
+        "Taken crearen en verdelen aan de andere"
       ],
-      "skills": ["React", "Tailwind CSS", "JavaScript", "Git", "GitHub"]
+      "skills": ["Figma", "Sentry", "X-Code", "Android-Studio", "Git", "GitHub"]
     },
     {
-      "name": "Innovative Solutions",
-      "position": "Junior Software Developer",
-      "location_type": "Hybrid",
-      "location": "Wellington, New Zealand",
+      "name": "Appec",
+      "position": "App Developer",
+      "location_type": "Stage",
+      "location": "Nijmegen, Netherland",
+      "url": "https://appec.nl",
+      "startDate": "2024-04-11",
+      "endDate": "2025",
+      "summary": "Gewekt aan verschillien de applicatie van desktop tot mobille applicaties",
+      "responsibilities": [
+        "UI componeten maken xml/dart",
+        "Code qualiteit verzorgen en bugs fixen",
+        "Collaborated in code reviews and helped maintain clean and scalable codebase."
+      ],
+      "skills": ["Flutter", "Kotlin", "XML", "Git", "GitHub"]
+    },
+    {
+      "name": "Dimerce",
+      "position": "Software Developer",
+      "location_type": "Stage",
+      "location": "Didam, Nerderland",
       "url": "https://innovativesolutions.com",
       "startDate": "2022-06-01",
       "endDate": "2023-06-01",
@@ -65,32 +78,6 @@
         "Participated in sprint planning and daily stand-ups."
       ],
       "skills": ["Python", "Django", "PostgreSQL", "Agile", "Git"]
-    },
-    {
-      "name": "Web Agency",
-      "position": "Intern Web Developer",
-      "location_type": "Remote",
-      "location": "Sydney, Australia",
-      "startDate": "2022-01-01",
-      "endDate": "2022-06-01",
-      "summary": "Gained hands-on experience in building websites for clients with HTML, CSS, and JavaScript.",
-      "highlights": [
-        "Completed 3+ client projects successfully under supervision"
-      ],
-      "skills": ["HTML", "CSS", "Basic JavaScript"]
-    }
-  ],
-  "volunteer": [
-    {
-      "organization": "Local Coding Club",
-      "position": "Volunteer",
-      "url": "https://codingclub.com/",
-      "startDate": "2021-01-01",
-      "endDate": "2022-01-01",
-      "summary": "Helped organize coding workshops and mentored beginners in basic programming concepts.",
-      "highlights": [
-        "Awarded 'Volunteer of the Month' for dedication and mentorship"
-      ]
     }
   ],
   "education": [
@@ -151,7 +138,7 @@
       "keywords": ["SSR", "Static Generation"]
     },
     {
-      "name": "Node.js",
+      "name": "Kotlin",
       "level": "Intermediate",
       "keywords": ["Express", "REST APIs"]
     },
@@ -191,12 +178,17 @@
       "keywords": ["Queries", "Joins", "Indexes"]
     },
     {
-      "name": "Django",
+      "name": "Flutter",
       "level": "Intermediate",
       "keywords": ["Models", "Views", "Auth"]
     },
     {
       "name": "SQL",
+      "level": "Intermediate",
+      "keywords": ["Schema Design", "Query Optimization"]
+    },
+    {
+      "name": "C#",
       "level": "Intermediate",
       "keywords": ["Schema Design", "Query Optimization"]
     }

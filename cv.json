@@ -2,11 +2,10 @@
   "basics": {
     "name": "Yucan Ye",
     "label": "Full Stack Developer",
-    "image": "/me_avatar.jpg",
+    "image": "/me_photo.png",
     "email": "yucanye05@gmail.com",
-    "phone": "+31 6 82933739",
     "url": "https://www.linkedin.com/in/yucan-ye/",
-    "summary": "Enthusiastic Junior Full Stack Developer with hands-on experience in React, TypeScript, C#, Kotlin, and Flutter. Passionate about crafting clean, scalable web applications and continuously learning new technologies. Currently studying Software Development at Technova College and seeking opportunities to grow in a professional development environment.",
+    "summary": "Enthusiastic Junior Full Stack Developer with hands-on experience in React, TypeScript, C#, Kotlin, and Flutter. Passionate about crafting clean, scalable web and mobile applications and continuously learning new technologies. Currently studying Software Development at Technova College and seeking opportunities to grow in a professional development environment.",
     "theme": "orange",
     "location": {
       "postalCode": "6714 DZ",
@@ -30,93 +29,88 @@
   "work": [
     {
       "name": "Appec",
-      "position": "App Developer & Projectmanager",
+      "position": "App Developer & Project Manager",
       "location_type": "Hybrid",
-      "location": "Nijmegen, Netherland",
+      "location": "Nijmegen, Netherlands",
       "url": "https://appec.nl",
       "startDate": "2025-04-11",
       "endDate": null,
-      "summary": "Taken vedelen en applicatie;s testen.",
+      "summary": "Responsible for task delegation and mobile app testing.",
       "responsibilities": [
-        "Mobie applicaties tesen van iOS tot ANdoird apparaten in verschillen de versies",
-        "Duidelijke feedback geven, niet allemaal screen shot met een response, maar ook onder zoek hoe en waar het bug is veroorzaakt",
-        "Taken crearen en verdelen aan de andere"
+        "Test mobile applications on various iOS and Android devices and OS versions.",
+        "Provide clear feedback, not just screenshots, but also investigate the root cause of bugs.",
+        "Create and assign tasks to team members."
       ],
-      "skills": ["Figma", "Sentry", "X-Code", "Android-Studio", "Git", "GitHub"]
+      "skills": ["Figma", "Sentry", "Xcode", "Android Studio", "Git", "GitHub"]
     },
     {
       "name": "Appec",
       "position": "App Developer",
-      "location_type": "Stage",
-      "location": "Nijmegen, Netherland",
+      "location_type": "Internship",
+      "location": "Nijmegen, Netherlands",
       "url": "https://appec.nl",
-      "startDate": "2024-04-11",
-      "endDate": "2025",
-      "summary": "Gewekt aan verschillien de applicatie van desktop tot mobille applicaties",
+      "startDate": "2024-11-11",
+      "endDate": "2025-04",
+      "summary": "Contributed to development of various applications, from desktop to mobile.",
       "responsibilities": [
-        "UI componeten maken xml/dart",
-        "Code qualiteit verzorgen en bugs fixen",
-        "Collaborated in code reviews and helped maintain clean and scalable codebase."
+        "Developed UI components using XML and Dart.",
+        "Completed Flutter and Kotlin courses on Udemy.",
+        "Maintained code quality and fixed bugs.",
+        "Participated in code reviews and helped ensure a scalable codebase."
       ],
-      "skills": ["Flutter", "Kotlin", "XML", "Git", "GitHub"]
+      "skills": [
+        "Flutter",
+        "Kotlin",
+        "XML",
+        "Android Studio",
+        "Git",
+        "GitHub",
+        "AI"
+      ]
     },
     {
       "name": "Dimerce",
       "position": "Software Developer",
-      "location_type": "Stage",
-      "location": "Didam, Nerderland",
-      "url": "https://innovativesolutions.com",
-      "startDate": "2022-06-01",
-      "endDate": "2023-06-01",
-      "summary": "Assisted in the development of backend systems and full-stack features using Python and Django in an agile team.",
-      "highlights": [
-        "Contributed to automation of internal workflows, improving efficiency by 30%"
-      ],
+      "location_type": "Internship",
+      "location": "Didam, Netherlands",
+      "url": "https://www.dimerce.com/",
+      "startDate": "2024-02-01",
+      "endDate": "2024-07-01",
+      "summary": "Worked in a Scrum team building internal Flutter apps.",
       "responsibilities": [
-        "Developed backend services with Django and integrated with PostgreSQL.",
-        "Worked with front-end developers to integrate APIs and UI components.",
-        "Participated in sprint planning and daily stand-ups."
+        "Collaborated within a Scrum team.",
+        "Gained hands-on company experience.",
+        "Wrote unit tests to ensure code quality.",
+        "Developed an internal app using Flutter and the MVVM architecture."
       ],
-      "skills": ["Python", "Django", "PostgreSQL", "Agile", "Git"]
+      "skills": ["Flutter", "Git", "GitHub"]
     }
   ],
-  "education": [
+  "projects": [
     {
-      "institution": "Technova College",
-      "url": "https://technova.nl",
-      "area": "Software Development",
-      "studyType": "MBO - Application Developer",
-      "startDate": "2023-09-01",
-      "endDate": null,
-      "courses": [
-        "Application Design",
-        "Web Development with React",
-        "Internship at Appec"
-      ]
-    },
-    {
-      "institution": "State University",
-      "url": "https://stateuniversity.edu",
-      "area": "Computer Science",
-      "studyType": "Bachelor",
-      "startDate": "2018-09-01",
-      "endDate": "2022-05-01",
-      "score": "3.8",
-      "courses": [
-        "CS101 - Introduction to Computer Science",
-        "CS102 - Data Structures"
-      ]
-    }
-  ],
-  "certificates": [
-    {
-      "name": "Full Stack Web Development",
-      "date": "2023-05-01",
-      "issuer": "Online University",
-      "url": "https://onlineuniversity.com/certificates/fullstack"
+      "name": "Leenplaats",
+      "isActive": true,
+      "description": "A school project - a React Progressive Web App.",
+      "highlights": [
+        "Built with React and Tailwind CSS",
+        "Responsive design and dark mode support",
+        "Used Laravel as the backend"
+      ],
+      "url": "https://github.com/FilterdWater/w5-leenplaats",
+      "github": "https://github.com/FilterdWater/w5-leenplaats"
     }
   ],
   "skills": [
+    {
+      "name": "HTML",
+      "level": "Intermediate",
+      "keywords": ["Semantic HTML", "Accessibility"]
+    },
+    {
+      "name": "CSS",
+      "level": "Intermediate",
+      "keywords": ["Flexbox", "Grid", "Media Queries"]
+    },
     {
       "name": "JavaScript",
       "level": "Intermediate",
@@ -135,12 +129,7 @@
     {
       "name": "Next.js",
       "level": "Beginner",
-      "keywords": ["SSR", "Static Generation"]
-    },
-    {
-      "name": "Kotlin",
-      "level": "Intermediate",
-      "keywords": ["Express", "REST APIs"]
+      "keywords": ["Server-side Rendering", "Static Generation"]
     },
     {
       "name": "Tailwind CSS",
@@ -148,14 +137,19 @@
       "keywords": ["Utility-first CSS", "Responsive Design"]
     },
     {
-      "name": "HTML",
+      "name": "Flutter",
       "level": "Intermediate",
-      "keywords": ["Semantic HTML", "Accessibility"]
+      "keywords": ["Models", "Views", "Authentication"]
     },
     {
-      "name": "CSS",
+      "name": "Csharp",
       "level": "Intermediate",
-      "keywords": ["Flexbox", "Grid", "Media Queries"]
+      "keywords": ["Schema Design", "Query Optimization"]
+    },
+    {
+      "name": "Kotlin",
+      "level": "Intermediate",
+      "keywords": ["Express", "REST APIs"]
     },
     {
       "name": "Git",
@@ -178,25 +172,20 @@
       "keywords": ["Queries", "Joins", "Indexes"]
     },
     {
-      "name": "Flutter",
-      "level": "Intermediate",
-      "keywords": ["Models", "Views", "Auth"]
-    },
-    {
       "name": "SQL",
-      "level": "Intermediate",
-      "keywords": ["Schema Design", "Query Optimization"]
-    },
-    {
-      "name": "C#",
       "level": "Intermediate",
       "keywords": ["Schema Design", "Query Optimization"]
     }
   ],
   "languages": [
-    { "language": "English", "fluency": "Professional Working Proficiency" },
-    { "language": "Spanish", "fluency": "Intermediate" },
-    { "language": "Chinese", "fluency": "Native Speaker" }
+    {
+      "language": "English",
+      "fluency": "Professional Working Proficiency"
+    },
+    {
+      "language": "Chinese",
+      "fluency": "Native Speaker"
+    }
   ],
   "interests": [
     {
@@ -204,48 +193,32 @@
       "keywords": ["AI", "Blockchain", "Web Development"]
     }
   ],
-  "projects": [
+  "education": [
     {
-      "name": "Personal Portfolio",
-      "isActive": true,
-      "description": "A developer portfolio to showcase projects, skills, and contact information.",
-      "highlights": [
-        "Built with React and Tailwind CSS",
-        "Responsive design and dark mode support"
-      ],
-      "url": "https://nacuy.dev",
-      "github": "https://github.com/Nacuy/personal-portfolio"
+      "institution": "Technova College",
+      "url": "https://www.technovacollege.nl/",
+      "area": "Software Development",
+      "studyType": "MBO - Application Developer",
+      "startDate": "2023-09-01",
+      "endDate": null,
+      "courses": [
+        "Application Design",
+        "Web Development with React",
+        "Internship at Appec"
+      ]
     },
     {
-      "name": "Weather App",
-      "isActive": true,
-      "description": "A weather forecast app using OpenWeatherMap API and modern JavaScript.",
-      "highlights": [
-        "Uses fetch API and geolocation",
-        "Mobile-friendly interface"
-      ],
-      "url": "https://weatherapp.com"
-    },
-    {
-      "name": "Task Manager",
-      "isActive": true,
-      "description": "Task tracking app with login system and persistent data using MongoDB.",
-      "highlights": [
-        "Built with Node.js, Express, MongoDB",
-        "Authentication with JWT"
-      ],
-      "url": "https://taskmanager.com",
-      "github": "https://github.com/Nacuy/task-manager"
-    },
-    {
-      "name": "E-commerce Site",
-      "isActive": false,
-      "description": "A full-stack online store with product pages, cart, and Stripe checkout.",
-      "highlights": [
-        "Developed with Next.js and Tailwind",
-        "Secure Stripe integration"
-      ],
-      "url": "https://ecommerce.com"
+      "institution": "Het Streek College",
+      "url": "https://www.hetstreek.nl/college/",
+      "area": "Economics",
+      "studyType": "Secondary Education",
+      "startDate": "2018-09-01",
+      "endDate": "2022-07-01",
+      "score": "7",
+      "courses": [
+        "CS101 - Introduction to Computer Science",
+        "CS102 - Data Structures"
+      ]
     }
   ]
 }

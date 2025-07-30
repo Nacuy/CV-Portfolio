@@ -96,8 +96,20 @@
         "Responsive design and dark mode support",
         "Used Laravel as the backend"
       ],
-      "url": "https://github.com/FilterdWater/w5-leenplaats",
+      "url": "https://leenplaats.yucanye.com/",
       "github": "https://github.com/FilterdWater/w5-leenplaats"
+    },
+    {
+      "name": "Emoji App",
+      "isActive": true,
+      "description": "A fun emoji app built with React Native and Expo.",
+      "highlights": [
+        "Built with React Native, Expo, and Tailwind (NativeWind)",
+        "State management using Zustand",
+        "Works as a Progressive Web App (PWA)"
+      ],
+      "url": "https://emoji-app.yucanye.com/",
+      "github": "https://github.com/Nacuy/EmojiApp"
     }
   ],
   "skills": [

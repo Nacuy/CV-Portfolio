@@ -8,7 +8,6 @@
     "summary": "Enthusiastic Junior Full Stack Developer with hands-on experience in React, TypeScript, C#, Kotlin, and Flutter. Passionate about crafting clean, scalable web and mobile applications and continuously learning new technologies. Currently studying Software Development at Technova College and seeking opportunities to grow in a professional development environment.",
     "theme": "orange",
     "location": {
-      "postalCode": "6714 DZ",
       "city": "Ede",
       "countryCode": "NL",
       "region": "Gelderland"
@@ -29,12 +28,54 @@
   "work": [
     {
       "name": "Appec",
+      "position": "App Developer",
+      "location_type": "Internship",
+      "location": "Nijmegen, Netherlands",
+      "url": "https://appec.nl",
+      "startDate": "2025-11-25",
+      "endDate": "2026-02-01",
+      "summary": "Working on the design and development of the Android app project.",
+      "responsibilities": [
+        "Design and develop the Flutter app project.",
+        "Develop feature for a kotlin Android app project.",
+        "Test mobile applications on various iOS and Android devices.",
+        "Provide clear feedback, not just screenshots, but also investigate the root cause of bugs."
+      ],
+      "skills": [
+        "Flutter",
+        "Kotlin",
+        "XML",
+        "Figma",
+        "Android Studio",
+        "Git",
+        "GitHub",
+        "AI"
+      ]
+    },
+    {
+      "name": "Vitrion",
+      "position": "App Developer",
+      "location_type": "Internship",
+      "location": "Apeldoorn, Netherlands",
+      "url": "https://vitrion.nl/",
+      "startDate": "2025-09-01",
+      "endDate": "2025-11-22",
+      "summary": "Working on the verbleif app project",
+      "responsibilities": [
+        "Integrate data with the backend.",
+        "Work on the UI and UX to improve the app.",
+        "Fix bugs and issues in the app."
+      ],
+      "skills": ["Expo", "React Native", "Xcode", "Git", "GitLab"]
+    },
+    {
+      "name": "Appec",
       "position": "App Developer & Project Manager",
       "location_type": "Hybrid",
       "location": "Nijmegen, Netherlands",
       "url": "https://appec.nl",
       "startDate": "2025-04-11",
-      "endDate": null,
+      "endDate": "2025-09-01",
       "summary": "Responsible for task delegation and mobile app testing.",
       "responsibilities": [
         "Test mobile applications on various iOS and Android devices and OS versions.",
@@ -83,7 +124,7 @@
         "Wrote unit tests to ensure code quality.",
         "Developed an internal app using Flutter and the MVVM architecture."
       ],
-      "skills": ["Flutter", "Git", "GitHub"]
+      "skills": ["Flutter", "Git", "GitLab"]
     }
   ],
   "projects": [
@@ -154,7 +195,7 @@
       "keywords": ["Models", "Views", "Authentication"]
     },
     {
-      "name": "Csharp",
+      "name": "C#",
       "level": "Intermediate",
       "keywords": ["Schema Design", "Query Optimization"]
     },
@@ -187,6 +228,66 @@
       "name": "SQL",
       "level": "Intermediate",
       "keywords": ["Schema Design", "Query Optimization"]
+    },
+    {
+      "name": "Node.js",
+      "level": "Intermediate",
+      "keywords": ["Server-side JavaScript", "NPM", "Express"]
+    },
+    {
+      "name": "Swift",
+      "level": "Intermediate",
+      "keywords": ["iOS Development", "SwiftUI"]
+    },
+    {
+      "name": "SwiftUI",
+      "level": "Intermediate",
+      "keywords": ["UI Framework", "iOS Development"]
+    },
+    {
+      "name": "Xcode",
+      "level": "Intermediate",
+      "keywords": ["IDE", "iOS Development", "Debugging"]
+    },
+    {
+      "name": "Expo",
+      "level": "Intermediate",
+      "keywords": ["React Native", "Mobile Development"]
+    },
+    {
+      "name": "React Native",
+      "level": "Intermediate",
+      "keywords": ["Mobile Development", "Cross-platform"]
+    },
+    {
+      "name": "Sentry",
+      "level": "Intermediate",
+      "keywords": ["Error Tracking", "Monitoring"]
+    },
+    {
+      "name": "Android Studio",
+      "level": "Intermediate",
+      "keywords": ["IDE", "Android Development"]
+    },
+    {
+      "name": "AI",
+      "level": "Beginner",
+      "keywords": ["Artificial Intelligence", "Machine Learning"]
+    },
+    {
+      "name": "XML",
+      "level": "Intermediate",
+      "keywords": ["Markup Language", "Android Layout"]
+    },
+    {
+      "name": "GitLab",
+      "level": "Intermediate",
+      "keywords": ["Version Control", "CI/CD"]
+    },
+    {
+      "name": "Laravel",
+      "level": "Intermediate",
+      "keywords": ["PHP Framework", "MVC", "REST API"]
     }
   ],
   "languages": [

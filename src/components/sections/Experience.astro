@@ -2,27 +2,29 @@
 import Section from "../Section.astro"
 import { work } from "@cv"
 
-import HTML from "@/icons/html.astro"
-import CSS from "@/icons/css.astro"
-import JavaScript from "@/icons/javascript.astro"
-import TypeScript from "@/icons/type.astro"
-import React from "@/icons/react.astro"
-import Node from "@/icons/node.astro"
-import MySQL from "@/icons/sql.astro"
-import Git from "@/icons/git.astro"
+import HTML from "@/icons/HTML.astro"
+import CSS from "@/icons/CSS.astro"
+import JavaScript from "@/icons/JavaScript.astro"
+import TypeScript from "@/icons/TypeScript.astro"
+import React from "@/icons/React.astro"
+import Node from "@/icons/Node.astro"
+import MySQL from "@/icons/SQL.astro"
+import Git from "@/icons/Git.astro"
 import GitHub from "@/icons/GitHub.astro"
-import Tailwind from "@/icons/tailwind.astro"
-import Next from "@/icons/next.astro"
-import Swift from "@/icons/swift.astro"
-import SwiftUI from "@/icons/swiftui.astro"
-import Kotlin from "@/icons/kotlin.astro"
-import Flutter from "@/icons/flutter.astro"
+import GitLab from "@/icons/GitLab.astro"
+import Tailwind from "@/icons/Tailwind.astro"
+import Next from "@/icons/Next.astro"
+import Swift from "@/icons/Swift.astro"
+import SwiftUI from "@/icons/SwiftUI.astro"
+import Kotlin from "@/icons/Kotlin.astro"
+import Flutter from "@/icons/Flutter.astro"
 import Figma from "@/icons/Figma.astro"
-import Xcode from "@/icons/xcode.astro"
-import Sentry from "@/icons/sentry.astro"
-import AndroidStudio from "@/icons/androidStudio.astro"
-import AI from "@/icons/ai.astro"
-import XML from "@/icons/code.astro"
+import Sentry from "@/icons/Sentry.astro"
+import AndroidStudio from "@/icons/AndroidStudio.astro"
+import AI from "@/icons/AI.astro"
+import XML from "@/icons/XML.astro"
+import Xcode from "@/icons/Xcode.astro"
+import Expo from "@/icons/Expo.astro"
 
 const SKILLS_ICONS: Record<string, any> = {
   HTML,
@@ -34,6 +36,7 @@ const SKILLS_ICONS: Record<string, any> = {
   MySQL,
   Git,
   GitHub,
+  GitLab,
   Next,
   Tailwind,
   Swift,
@@ -46,18 +49,22 @@ const SKILLS_ICONS: Record<string, any> = {
   AndroidStudio,
   AI,
   XML,
+  Expo,
+  ReactNative: React,
 }
 
 const skillToIconName: Record<string, string> = {
   "XML": "XML",
   "Android Studio": "AndroidStudio",
   "Next.js": "Next",
+  "React Native": "ReactNative",
 }
 ---
 
 <Section className={Astro.props.className} title="Experience">
-  <ul class="flex flex-col">
-    {work.map(({ name, startDate, endDate, position, summary, responsibilities, url, skills, location, location_type }) => {
+  <div x-data="{ showAll: false }">
+    <ul class="flex flex-col">
+      {work.map(({ name, startDate, endDate, position, summary, responsibilities, url, skills, location, location_type }, index) => {
       const formatDate = (dateStr: string | number | Date) => {
         if (!dateStr) return "Present"
         const d = new Date(dateStr)
@@ -69,8 +76,14 @@ const skillToIconName: Record<string, string> = {
       const startFormatted = formatDate(startDate)
       const endFormatted = endDate ? formatDate(endDate) : "Present"
 
+      const shouldShow = work.length > 3 ? (index < 3 ? "true" : "showAll") : "true";
+      
       return (
-        <li class="relative print:py-2">
+        <li 
+          class="relative print:py-2" 
+          x-show={shouldShow}
+          x-collapse.min.50px
+        >
           <div class="group relative grid pb-1 print:pb-0 transition-all print:grid-cols-1 print:gap-1 sm:grid-cols-12 sm:gap-8 md:gap-6 lg:hover:!opacity-100 ">
 <header class="relative mt-1 text-xs font-semibold sm:col-span-3">
               <time datetime={startDate} data-title={startDate}>{startFormatted}</time> - <time datetime={endDate} data-title={endDate}>{endFormatted}</time>
@@ -141,7 +154,7 @@ const skillToIconName: Record<string, string> = {
                     const iconName = skillToIconName[skill] || skill.replace(/\s+/g, '')
                     const Icon = SKILLS_ICONS[iconName]
                     return (
-                      <li class="bg-skin-button-accent/20 border-skin-hue/20 text-skin-hue print:p-0 print:bg-transparent print:text-zinc-800 flex gap-1 items-center border-solid print:border-none border rounded-md px-2 py-0.5 text-xs">
+                      <li class="bg-skin-hue/10 border-skin-hue/30 text-skin-hue print:p-0 print:bg-transparent print:text-zinc-800 flex gap-1 items-center border-solid print:border-none border rounded-md px-2 py-0.5 text-xs hover:bg-skin-hue/15 transition-colors">
   {Icon && <Icon />} <span>{skillToIconName[skill] || skill}</span>
 </li>
                     )
@@ -153,7 +166,32 @@ const skillToIconName: Record<string, string> = {
         </li>
       )
     })}
-  </ul>
+    </ul>
+    {work.length > 3 && (
+      <button 
+        @click="showAll = !showAll" 
+        class="print:hidden mt-6 w-fit cursor-pointer items-center justify-center gap-1.5 text-sm underline text-skin-muted transition-all hover:text-skin-base flex mx-auto"
+      >
+        <span>
+            <span x-show="!showAll">Show more details</span>
+          <span x-show="showAll">Show less details</span>
+        </span>
+        <svg 
+          class="w-4 h-4 transition-transform duration-200 ease-out" 
+          :class="{ 'rotate-180': showAll }" 
+          viewBox="0 0 24 24" 
+          xmlns="http://www.w3.org/2000/svg" 
+          fill="none" 
+          stroke="currentColor" 
+          stroke-width="2" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"
+        >
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </button>
+    )}
+  </div>
 </Section>
 
 <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>

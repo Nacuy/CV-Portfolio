@@ -3,176 +3,210 @@ import { basics } from "@cv";
 import Vengeance from "@/layouts/Vengeance.astro";
 
 interface Props {
-	title: string;
-	description?: string;
+  title: string;
+  description?: string;
 }
 
 const { title, description } = Astro.props;
 
-const { name, label, image, summary, email, theme, location, profiles } = basics;
-const siteUrl = Astro.site || (Astro.url ? new URL(Astro.url.pathname, Astro.url).origin : 'https://yucanye.com');
+const { name, label, image, summary, email, theme, location, profiles } =
+  basics;
+const loc = location as {
+  city: string;
+  region: string;
+  countryCode: string;
+  postalCode?: string;
+};
+const siteUrl =
+  Astro.site ||
+  (Astro.url
+    ? new URL(Astro.url.pathname, Astro.url).origin
+    : "https://yucanye.com");
 const canonicalUrl = Astro.url ? Astro.url.href : siteUrl;
 const fullImageUrl = image.startsWith("http") ? image : `${siteUrl}${image}`;
 const pageDescription = description || summary;
 const pageTitle = title;
 
 const structuredData = {
-	"@context": "https://schema.org",
-	"@type": "Person",
-	"name": name,
-	"jobTitle": label,
-	"description": pageDescription,
-	"email": email,
-	"url": canonicalUrl,
-	"image": fullImageUrl,
-	"address": {
-		"@type": "PostalAddress",
-		"addressLocality": location.city,
-		"addressRegion": location.region,
-		"postalCode": location.postalCode,
-		"addressCountry": location.countryCode
-	},
-	"sameAs": profiles.map(profile => profile.url)
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: name,
+  jobTitle: label,
+  description: pageDescription,
+  email: email,
+  url: canonicalUrl,
+  image: fullImageUrl,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: loc.city,
+    addressRegion: loc.region,
+    ...(loc.postalCode && { postalCode: loc.postalCode }),
+    addressCountry: loc.countryCode,
+  },
+  sameAs: profiles.map((profile) => profile.url),
 };
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-		<meta name="theme-color" content="#f97316" />
-		<meta name="color-scheme" content="light dark" />
-		
-		<title>{pageTitle}</title>
-		<meta name="description" content={pageDescription} />
-		<meta name="author" content={name} />
-		<meta name="keywords" content={`${name}, ${label}, Portfolio, Resume, CV, Full Stack Developer, Web Developer, Mobile Developer`} />
-		<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-		<link rel="canonical" href={canonicalUrl} />
-		
-		{/* Favicon */}
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="apple-touch-icon" href={fullImageUrl} />
-		
-		{/* Preload critical resources */}
-		<link rel="preload" as="image" href={image} />
-		<link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#f97316" />
+    <meta name="color-scheme" content="light dark" />
 
-		{/* Open Graph / Facebook */}
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content={canonicalUrl} />
-		<meta property="og:title" content={pageTitle} />
-		<meta property="og:description" content={pageDescription} />
-		<meta property="og:image" content={fullImageUrl} />
-		<meta property="og:image:width" content="1200" />
-		<meta property="og:image:height" content="630" />
-		<meta property="og:image:alt" content={`${name} - ${label}`} />
-		<meta property="og:site_name" content={`${name} Portfolio`} />
-		<meta property="og:locale" content="en_US" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription} />
+    <meta name="author" content={name} />
+    <meta
+      name="keywords"
+      content={`${name}, ${label}, Portfolio, Resume, CV, Full Stack Developer, Web Developer, Mobile Developer`}
+    />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <link rel="canonical" href={canonicalUrl} />
 
-		{/* Twitter Card */}
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:url" content={canonicalUrl} />
-		<meta name="twitter:title" content={pageTitle} />
-		<meta name="twitter:description" content={pageDescription} />
-		<meta name="twitter:image" content={fullImageUrl} />
-		<meta name="twitter:image:alt" content={`${name} - ${label}`} />
-		{basics.profiles.find(p => p.network === "X") && (
-			<meta name="twitter:creator" content={`@${basics.profiles.find(p => p.network === "X")?.username}`} />
-		)}
-		
-		{/* Structured Data */}
-		<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+    {/* Favicon */}
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href={fullImageUrl} />
 
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Itim" />
+    {/* Preload critical resources */}
+    <link rel="preload" as="image" href={image} />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
 
-		<link rel="stylesheet" href="/themes/themes.css" />
-		<Vengeance />
-	</head>
-	<body data-theme={theme} class="relative bg-skin-fill">
-		<div class="absolute top-0 -z-10 h-full w-full print:hidden">
-			<div class="bg-skin-hue/10 absolute bottom-auto left-[20%] right-auto top-0 h-[200px] w-[200px] -translate-x-[30%] translate-y-[20%] rounded-full blur-[80px] invert-0 dark:bg-white/5"></div>
-		</div>
-		<slot />
-		<style is:global>
-			body,
-			figure {
-				margin: 0;
-				padding: 0;
-			}
+    {/* Open Graph / Facebook */}
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:image" content={fullImageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={`${name} - ${label}`} />
+    <meta property="og:site_name" content={`${name} Portfolio`} />
+    <meta property="og:locale" content="en_US" />
 
-			a {
-				text-decoration: none;
-			}
+    {/* Twitter Card */}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalUrl} />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={pageDescription} />
+    <meta name="twitter:image" content={fullImageUrl} />
+    <meta name="twitter:image:alt" content={`${name} - ${label}`} />
+    {
+      basics.profiles.find((p) => p.network === "X") && (
+        <meta
+          name="twitter:creator"
+          content={`@${basics.profiles.find((p) => p.network === "X")?.username}`}
+        />
+      )
+    }
 
-			ul {
-				list-style: none;
-				margin: 0;
-				padding: 0;
-			}
+    {/* Structured Data */}
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(structuredData)}
+    />
 
-			*,
-			*::before,
-			*::after {
-				box-sizing: border-box;
-			}
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Itim"
+    />
 
-			h1,
-			h2,
-			h3,
-			h4 {
-				@apply text-skin-base;
-				margin: 0;
-				font-family:
-					system-ui,
-					-apple-system,
-					BlinkMacSystemFont,
-					"Segoe UI",
-					Roboto,
-					Oxygen,
-					Ubuntu,
-					Cantarell,
-					"Open Sans",
-					"Helvetica Neue",
-					sans-serif;
-			}
+    <link rel="stylesheet" href="/themes/themes.css" />
+    <Vengeance />
+  </head>
+  <body data-theme={theme} class="relative bg-skin-fill">
+    <div class="absolute top-0 -z-10 h-full w-full print:hidden">
+      <div
+        class="absolute bottom-auto left-[20%] right-auto top-0 h-[200px] w-[200px] -translate-x-[30%] translate-y-[20%] rounded-full bg-skin-hue/10 blur-[80px] invert-0 dark:bg-white/5"
+      >
+      </div>
+    </div>
+    <slot />
+    <style is:global>
+      body,
+      figure {
+        margin: 0;
+        padding: 0;
+      }
 
-			p {
-				@apply text-sm text-skin-muted;
-				line-height: 1.5;
-				text-wrap: pretty;
-			}
+      a {
+        text-decoration: none;
+      }
 
-			.print {
-				display: none !important;
-			}
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
 
-			.dev * {
-				@apply border border-red-500/50 bg-red-500/5;
-			}
-			#hotkeypad [data-backdrop] {
-				@apply !bg-zinc-800 !opacity-80;
-			}
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
 
-			@media print {
-				.no-print {
-					display: none !important;
-				}
+      h1,
+      h2,
+      h3,
+      h4 {
+        @apply text-skin-base;
+        margin: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          Cantarell,
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
 
-				.print {
-					display: block !important;
-				}
+      p {
+        @apply text-sm text-skin-muted;
+        line-height: 1.5;
+        text-wrap: pretty;
+      }
 
-				astro-dev-toolbar {
-					display: none !important;
-				}
+      .print {
+        display: none !important;
+      }
 
-				article {
-					break-inside: avoid;
-				}
-			}
-		</style>
-	</body>
+      .dev * {
+        @apply border border-red-500/50 bg-red-500/5;
+      }
+      #hotkeypad [data-backdrop] {
+        @apply !bg-zinc-800 !opacity-80;
+      }
+
+      @media print {
+        .no-print {
+          display: none !important;
+        }
+
+        .print {
+          display: block !important;
+        }
+
+        astro-dev-toolbar {
+          display: none !important;
+        }
+
+        article {
+          break-inside: avoid;
+        }
+      }
+    </style>
+  </body>
 </html>

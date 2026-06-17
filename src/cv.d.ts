@@ -1,16 +1,23 @@
 export interface CV {
   basics: Basics;
   work: Array<Work>;
-  volunteer: Array<Volunteer>;
   education: Array<Education>;
-  awards: Array<Awards>;
-  certificates: Array<Certificates>;
-  publications: Array<Publications>;
   skills: Array<Skills>;
   languages: Array<Languages>;
   interests: Array<Interests>;
-  references: Array<References>;
   projects: Array<Projects>;
+  currently: Array<Currently>;
+  volunteer?: Array<Volunteer>;
+  awards?: Array<Awards>;
+  certificates?: Array<Certificates>;
+  publications?: Array<Publications>;
+  references?: Array<References>;
+}
+
+interface Currently {
+  title: string;
+  description: string;
+  skills?: Array<string>;
 }
 
 interface Basics {
@@ -18,9 +25,10 @@ interface Basics {
   label: string;
   image: string;
   email: string;
-  phone: string;
+  phone?: string;
   url: string;
   summary: string;
+  theme?: string;
   location: Location;
   profiles: Array<Profiles>;
 }
@@ -42,14 +50,18 @@ interface Profiles {
 interface Work {
   name: string;
   position: string;
-  url: string;
+  url?: string;
+  location?: string;
+  location_type?: string;
   startDate: DateStr;
   endDate: DateStr | null;
   summary: string;
-  highlights: Highlight;
+  responsibilities?: Array<string>;
+  skills?: Array<string>;
+  highlights?: Highlight;
 }
 
-type DateStr = `${string}-${string}-${string}`;
+type DateStr = `${string}-${string}` | `${string}-${string}-${string}`;
 
 interface Volunteer {
   organization: string;
@@ -93,11 +105,12 @@ interface Education {
   institution: string;
   url: string;
   area: string;
-  studyType: string;
+  studyType?: string;
+  location?: string;
   startDate: DateStr;
-  endDate: DateStr;
-  score: string;
-  courses: Array<string>;
+  endDate: DateStr | null;
+  score?: string;
+  courses?: Array<string>;
 }
 
 interface Languages {
@@ -142,4 +155,4 @@ interface References {
   reference: string;
 }
 
-type Highlight = Array<String>;
+type Highlight = Array<string>;

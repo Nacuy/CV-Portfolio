@@ -5,7 +5,7 @@
     "image": "/me_photo.png",
     "email": "yucanye05@gmail.com",
     "url": "https://www.linkedin.com/in/yucan-ye/",
-    "summary": "Enthusiastic Junior Full Stack Developer with hands-on experience in React, TypeScript, C#, Kotlin, and Flutter. Passionate about crafting clean, scalable web and mobile applications and continuously learning new technologies. Currently studying Software Development at Technova College and seeking opportunities to grow in a professional development environment.",
+    "summary": "Enthusiastic Junior Full Stack Developer with hands-on experience in React, TypeScript, C#, Kotlin, and Flutter. Passionate about crafting clean, scalable web and mobile applications and continuously learning new technologies. Completed Software Development at Technova College and will start the HBO ICT program at HAN University of Applied Sciences in Arnhem in September 2026.",
     "theme": "orange",
     "location": {
       "city": "Ede",
@@ -93,7 +93,7 @@
       "location": "Nijmegen, Netherlands",
       "url": "https://appec.nl",
       "startDate": "2024-11-11",
-      "endDate": "2025-04",
+      "endDate": "2025-04-01",
       "summary": "Contributed to various applications from desktop to mobile. Advanced my Flutter skills and learned Android app development with Kotlin and XML.",
       "responsibilities": [
         "Developed UI components using XML and Dart.",
@@ -127,6 +127,28 @@
         "Developed an internal app using Flutter and the MVVM architecture."
       ],
       "skills": ["Flutter", "Git", "GitLab"]
+    },
+    {
+      "name": "Plein 89",
+      "position": "Snackbar Cook",
+      "location_type": "Part-time",
+      "location": "Ede, Netherlands",
+      "url": "https://www.plein89-ede.nl/",
+      "startDate": "2020-09-01",
+      "endDate": null,
+      "summary": "Prepared snacks, fries, and grill items in a busy local snackbar while balancing school and later college.",
+      "responsibilities": [
+        "Prepared and cooked snacks, fries, burgers, and grill orders.",
+        "Served customers and handled takeaway and delivery orders.",
+        "Worked effectively in a fast-paced environment during peak hours."
+      ]
+    }
+  ],
+  "currently": [
+    {
+      "title": "Learning Java",
+      "description": "Using my holiday break to study Java fundamentals, object-oriented programming, and build small practice projects.",
+      "skills": ["Java"]
     }
   ],
   "projects": [
@@ -199,12 +221,12 @@
     {
       "name": "C#",
       "level": "Intermediate",
-      "keywords": ["Schema Design", "Query Optimization"]
+      "keywords": [".NET", "OOP", "ASP.NET"]
     },
     {
       "name": "Kotlin",
       "level": "Intermediate",
-      "keywords": ["Express", "REST APIs"]
+      "keywords": ["Android Development", "Coroutines", "Jetpack"]
     },
     {
       "name": "Git",
@@ -235,16 +257,6 @@
       "name": "Node.js",
       "level": "Intermediate",
       "keywords": ["Server-side JavaScript", "NPM", "Express"]
-    },
-    {
-      "name": "Swift",
-      "level": "Intermediate",
-      "keywords": ["iOS Development", "SwiftUI"]
-    },
-    {
-      "name": "SwiftUI",
-      "level": "Intermediate",
-      "keywords": ["UI Framework", "iOS Development"]
     },
     {
       "name": "Xcode",
@@ -310,12 +322,22 @@
   ],
   "education": [
     {
+      "institution": "HAN University of Applied Sciences",
+      "url": "https://www.han.nl/opleidingen/hbo/ict/voltijd/",
+      "area": "ICT",
+      "studyType": "HBO - Bachelor",
+      "location": "Arnhem, Netherlands",
+      "startDate": "2026-09-01",
+      "endDate": null,
+      "courses": ["Software & Robotics", "Data & AI", "Infra & Cybersecurity"]
+    },
+    {
       "institution": "Technova College",
       "url": "https://www.technovacollege.nl/",
       "area": "Software Development",
       "studyType": "MBO - Application Developer",
       "startDate": "2022-09-01",
-      "endDate": null,
+      "endDate": "2026-07-01",
       "courses": [
         "Application Design",
         "Web Development with React",
@@ -330,10 +352,7 @@
       "startDate": "2018-09-01",
       "endDate": "2022-07-01",
       "score": "7",
-      "courses": [
-        "CS101 - Introduction to Computer Science",
-        "CS102 - Data Structures"
-      ]
+      "courses": ["Economics", "Business Studies", "Mathematics"]
     }
   ]
 }

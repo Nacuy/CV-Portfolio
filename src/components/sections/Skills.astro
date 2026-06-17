@@ -1,116 +1,73 @@
 ---
 import Section from "../Section.astro";
-import HTML from "@/icons/HTML.astro";
-import CSS from "@/icons/CSS.astro";
-import JavaScript from "@/icons/JavaScript.astro";
-import TypeScript from "@/icons/TypeScript.astro";
-import React from "@/icons/React.astro";
-import Node from "@/icons/Node.astro";
-import SQL from "@/icons/SQL.astro";
-import MySQL from "@/icons/MySQL.astro";
-import Git from "@/icons/Git.astro";
-import GitHub from "@/icons/GitHub.astro";
-import Tailwind from "@/icons/Tailwind.astro";
-import Next from "@/icons/Next.astro";
 import { skills } from "@cv";
-import Swift from "@/icons/Swift.astro";
-import SwiftUI from "@/icons/SwiftUI.astro";
-import Kotlin from "@/icons/Kotlin.astro";
-import Flutter from "@/icons/Flutter.astro";
-import Figma from "@/icons/Figma.astro";
-import GitLab from "@/icons/GitLab.astro";
-import CSharp from "@/icons/CSharp.astro";
-import Xcode from "@/icons/Xcode.astro";
-import Expo from "@/icons/Expo.astro";
-import Sentry from "@/icons/Sentry.astro";
-import AndroidStudio from "@/icons/AndroidStudio.astro";
-import AI from "@/icons/AI.astro";
-import XML from "@/icons/XML.astro";
-import Laravel from "@/icons/Laravel.astro";
+import { getSkillIcon } from "@/lib/skillIcons";
 
-const SKILLS_ICONS: Record<string, any> = {
-  HTML,
-  CSS,
-  JavaScript,
-  TypeScript,
-  React,
-  Node,
-  SQL,
-  MySQL,
-  Git,
-  GitHub,
-  GitLab,
-  Next,
-  Tailwind,
-  Swift,
-  SwiftUI,
-  Kotlin,
-  Flutter,
-  Figma,
-  Xcode,
-  Sentry,
-  AndroidStudio,
-  AI,
-  XML,
-  Expo,
-  ReactNative: React,
-  CSharp,
-  Laravel,
-};
-
-const iconMap: Record<string, string> = {
-  "Next.js": "Next",
-  "C#": "CSharp",
-  "Tailwind CSS": "Tailwind",
-  "React Native": "ReactNative",
-  "Node.js": "Node",
-  "Android Studio": "AndroidStudio",
-};
-
-// 技能分类
 const skillCategories = {
-  "Frontend": ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS"],
-  "Mobile": ["Flutter", "Kotlin", "Swift", "SwiftUI", "React Native", "Expo"],
-  "Backend": ["Node.js", "C#", "SQL", "MySQL", "Laravel"],
-  "Tools & Design": ["Git", "GitHub", "GitLab", "Figma", "Xcode", "Android Studio", "Sentry", "AI", "XML"],
+  Frontend: [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Tailwind CSS",
+  ],
+  Mobile: ["Flutter", "Kotlin", "React Native", "Expo"],
+  Backend: ["Node.js", "C#", "SQL", "MySQL", "Laravel"],
+  "Tools & Design": [
+    "Git",
+    "GitHub",
+    "GitLab",
+    "Figma",
+    "Xcode",
+    "Android Studio",
+    "Sentry",
+    "AI",
+    "XML",
+  ],
 };
 
-// 将技能按类别分组
-const categorizedSkills = skills.reduce((acc, skill) => {
-  const category = Object.entries(skillCategories).find(([_, skills]) => 
-    skills.includes(skill.name)
-  )?.[0] || "Other";
-  
-  if (!acc[category]) {
-    acc[category] = [];
-  }
-  acc[category].push(skill);
-  return acc;
-}, {} as Record<string, typeof skills>);
+const categorizedSkills = skills.reduce(
+  (acc, skill) => {
+    const category =
+      Object.entries(skillCategories).find(([_, categorySkills]) =>
+        categorySkills.includes(skill.name),
+      )?.[0] || "Other";
+
+    if (!acc[category]) {
+      acc[category] = [];
+    }
+    acc[category].push(skill);
+    return acc;
+  },
+  {} as Record<string, typeof skills>,
+);
 ---
 
 <Section className={Astro.props.className} title="Skills">
   <div class="flex flex-col gap-8">
-    {Object.entries(categorizedSkills)
-      .filter(([_, categorySkills]) => categorySkills.length > 0)
-      .map(([category, categorySkills]) => (
-      <div class="flex flex-col gap-3">
-        <h4 class="text-sm font-semibold text-skin-muted uppercase tracking-wide">
-          {category}
-        </h4>
-        <ul class="inline-flex flex-wrap gap-4 [&>li>svg]:size-5 [&>li>svg]:text-skin-hue [&>li]:text-sm">
-          {categorySkills.map(({ name }) => {
-            const iconName = iconMap[name] || name;
-            const Icon = SKILLS_ICONS[iconName];
+    {
+      Object.entries(categorizedSkills)
+        .filter(([_, categorySkills]) => categorySkills.length > 0)
+        .map(([category, categorySkills]) => (
+          <div class="flex flex-col gap-3">
+            <h4 class="text-sm font-semibold uppercase tracking-wide text-skin-muted">
+              {category}
+            </h4>
+            <ul class="inline-flex flex-wrap gap-4 [&>li>svg]:size-5 [&>li>svg]:text-skin-hue [&>li]:text-sm">
+              {categorySkills.map(({ name }) => {
+                const Icon = getSkillIcon(name);
 
-            return (
-              <li class="bg-skin-hue/10 border-skin-hue/30 text-skin-hue flex items-center gap-1 rounded-md px-2 py-0.5 text-xs print:border-none print:bg-transparent print:p-0 print:text-zinc-800 hover:bg-skin-hue/15 transition-colors">
-                {Icon && <Icon />} <span>{name}</span>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-    ))}
+                return (
+                  <li class="flex items-center gap-1 rounded-md border-skin-hue/30 bg-skin-hue/10 px-2 py-0.5 text-xs text-skin-hue transition-colors hover:bg-skin-hue/15 print:border-none print:bg-transparent print:p-0 print:text-zinc-800">
+                    {Icon && <Icon />} <span>{name}</span>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        ))
+    }
   </div>
 </Section>

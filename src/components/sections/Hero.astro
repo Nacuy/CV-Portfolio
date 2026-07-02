@@ -39,8 +39,7 @@ const printInfo = [email, linkedUrl].filter(Boolean).join(" • ");
         {
           email && (
             <div
-              data-email={email}
-              x-data="{ copyNotification: false, copyToClipboard() { navigator.clipboard.writeText(this.$el.dataset.email); this.copyNotification = true; const self = this; setTimeout(function() { self.copyNotification = false; }, 3000); } }"
+              x-data={`{ copyText: ${JSON.stringify(email)}, copyNotification: false, copyToClipboard() { navigator.clipboard.writeText(this.copyText); this.copyNotification = true; const self = this; setTimeout(function() { self.copyNotification = false; }, 3000); } }`}
               class="relative flex items-center"
             >
               <div
